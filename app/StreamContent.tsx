@@ -14,5 +14,5 @@ export function StreamContent({ stream }: { stream: AsyncGenerator<React.JSX.Ele
     readStream()
   }, [stream])
 
-  return <div>{content.map((item, index) => React.cloneElement(item, { key: index }))}</div>
+  return <div>{content}</div>
 }
