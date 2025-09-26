@@ -20,7 +20,6 @@ https://x.com/benapatton/status/1971619183831244990
 > - I don't want to use the useChat hook
 
 ### Credits
-- [grok research](https://grok.com/share/bGVnYWN5_79d91f47-0712-43d4-ab80-9f218812324d)
+- [grok research](https://grok.com/share/bGVnYWN5_aebcae7b-807d-4690-a9fa-35a3e59b2642)
 - [cursor fixes](cursor_fixes.md)
-
 
