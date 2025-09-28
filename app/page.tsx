@@ -17,8 +17,15 @@ async function* generateText() {
 export default async function Home() {
   const stream = generateText()
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <StreamContent stream={stream} />
-    </Suspense>
+    <div className="mx-auto max-w-3xl p-2">
+      <title>next-jsx-stream</title>
+      <h1 className="text-2xl font-bold">next-jsx-stream</h1>
+      <a href="https://github.com/jldec/next-jsx-stream" className="text-blue-500 hover:underline mb-4 block">
+        GitHub
+      </a>
+      <Suspense fallback={<div>Loading...</div>}>
+        <StreamContent stream={stream} />
+      </Suspense>
+    </div>
   )
 }
