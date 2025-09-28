@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react'
+import React from 'react'
+import { GitHub } from './GitHub'
 import { StreamContent } from './StreamContent'
 
 // Disable caching to ensure streaming works in production
@@ -20,9 +21,7 @@ export default async function Home() {
     <div className="mx-auto max-w-3xl p-2">
       <title>next-jsx-stream</title>
       <h1 className="text-2xl font-bold">next-jsx-stream</h1>
-      <a href="https://github.com/jldec/next-jsx-stream" className="text-blue-500 hover:underline mb-4 block">
-        GitHub
-      </a>
+      <GitHub />
       <StreamContent stream={stream} />
     </div>
   )
