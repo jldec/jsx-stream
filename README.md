@@ -4,6 +4,8 @@ React Server Components (RSC) can generate streams of JSX components. This exten
 
 This implementation performs streaming once during the initial page load, resulting in chunks arriving as part of the main document HTML. It also makes the stream available as a `getStream()` server function, which can be fetched on demand from the client.
 
+The initial page load streaming does not work as expected in Safari - the page is only rendered at the end of the stream. See [1](https://github.com/vercel/next.js/issues/51033), [2](https://github.com/vercel/next.js/issues/52444), [3](https://bugs.webkit.org/show_bug.cgi?id=252413).
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 For the RedwoodSDK version see [rwsdk-jsx-stream](https://github.com/jldec/rwsdk-jsx-stream).

@@ -1,19 +1,17 @@
 'use server'
-import { nanoid } from "nanoid"
+import { customAlphabet } from 'nanoid'
+const nanoid = customAlphabet('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', 7)
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-function time(): string {
-  return new Date().toISOString().slice(11, 23)
-}
-
 async function* generateText() {
-  const messages = ['Streaming started...', 'Chunk 1', 'Chunk 2', 'Chunk 3', 'Done!']
+  const messages = ['Streaming started...', 'Chunk 1', 'Chunk 2', 'Chunk 3', 'Chunk 4', 'Chunk 5', 'Done!']
   for (let i = 0; i < messages.length; i++) {
-    yield <div key={nanoid()}>{`${time()} ${messages[i]}`}</div>
-    await sleep(500)
+    const id = nanoid()
+    yield <div key={id} className="text-sm font-mono">{`${id} ${messages[i]}`}</div>
+    await sleep(250)
   }
 }
 
