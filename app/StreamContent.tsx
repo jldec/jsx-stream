@@ -14,5 +14,5 @@ export function StreamContent({ stream }: { stream: AsyncGenerator<React.JSX.Ele
     readStream()
   }, [stream])
 
-  return <div>{content}</div>
+  return <>{content}</>
 }

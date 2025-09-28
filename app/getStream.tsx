@@ -18,5 +18,5 @@ async function* generateText() {
 }
 
 export async function getStream() {
-  return await generateText()
+  return generateText()
 }
