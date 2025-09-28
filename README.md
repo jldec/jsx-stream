@@ -1,5 +1,12 @@
 # nextjs jsx-stream
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). For the RedwoodSDK version see [rwsdk-jsx-stream](https://github.com/jldec/rwsdk-jsx-stream).
+
+React Server Components (RSC) can generate streams of JSX components. This extends the more common pattern of atomically returning a single server-rendered component, by returning multiple components as separate chunks of a [readable stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
+
+This implementation performs streaming once during the initial page load, resulting in chunks arriving as part of the main document HTML. It also makes the stream available as a `getStream()` server function, which can be fetched on demand from the client.
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+For the RedwoodSDK version see [rwsdk-jsx-stream](https://github.com/jldec/rwsdk-jsx-stream).
 
 ### Deployed
 https://jsx-stream-iota.vercel.app/
