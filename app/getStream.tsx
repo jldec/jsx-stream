@@ -7,7 +7,7 @@ function sleep(ms: number) {
 }
 
 async function* generateText() {
-  const messages = ['Streaming started...', 'Chunk 1', 'Chunk 2', 'Chunk 3', 'Chunk 4', 'Chunk 5', 'Done!']
+  const messages = ['Streaming started...', 'Chunk 1', 'Chunk 2', 'Chunk 3', 'Chunk 4', 'Done!']
   for (let i = 0; i < messages.length; i++) {
     const id = nanoid()
     yield <div key={id} className="text-sm font-mono">{`${id} ${messages[i]}`}</div>
